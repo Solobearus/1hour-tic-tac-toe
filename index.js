@@ -57,11 +57,11 @@ class Game {
     }
 
     playTurn(e, rowIndex, columnIndex) {
-        // console.log(rowIndex);
-
-        e.target.innerHTML = this.playersTurn;
-        this.boardData[rowIndex][columnIndex] = this.playersTurn;
-        this.checkWin();
+        if (e.target.innerHTML === "") {
+            e.target.innerHTML = this.playersTurn;
+            this.boardData[rowIndex][columnIndex] = this.playersTurn;
+            this.checkWin();
+        }
     }
 
     checkWin() {
