@@ -2,7 +2,7 @@ class Game {
     constructor() {
         $('button').click(() => this.startGame());
         this.boardElements = this.getBoardElements();
-        this.playersTurn = "x";
+        this.playersTurn = "😇";
         this.playing = false;
         this.playerXscore = 0;
         this.playerYscore = 0;
@@ -18,7 +18,7 @@ class Game {
             [0, 0, 0]
         ];
         this.clearBoard();
-        this.playersTurn = "x";
+        this.playersTurn = "😇";
         this.playing = true;
     }
 
@@ -104,12 +104,12 @@ class Game {
             this.boardData[1][1] === this.playersTurn &&
             this.boardData[2][0] === this.playersTurn
         ) {
-            this.playersTurn === "x" ? this.playerXscore++ : this.playerYscore++;
-            $('h3').text(`X : ${this.playerXscore} ......................... Y : ${this.playerYscore}`)
+            this.playersTurn === "😇" ? this.playerXscore++ : this.playerYscore++;
+            $('h3').text(`😇 : ${this.playerXscore} ......................... 😈 : ${this.playerYscore}`)
             alert(`${this.playersTurn} won ! `);
             this.startGame();
         } else {
-            this.playersTurn = this.playersTurn === "x" ? "o" : "x";
+            this.playersTurn = this.playersTurn === "😇" ? "😈" : "😇";
         }
     }
 }
