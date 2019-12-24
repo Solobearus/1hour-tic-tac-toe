@@ -1,10 +1,21 @@
+body{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
 .container {
     width: 300px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+
+
 }
 
 .row{
@@ -12,6 +23,7 @@
 }
 
 .cell {
+    cursor: pointer;
     box-sizing: border-box;
     width: 100px;
     height: 100px;
@@ -22,4 +34,10 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+
+button{
+    margin: 20px;
+    font-size: 2em;
+    padding: 0.2em 0.4em;
 }
